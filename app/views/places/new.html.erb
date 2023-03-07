@@ -1,0 +1,11 @@
+<h1>Add the Place:</h1>
+
+<div>
+  <%= simple_form_for(@place) do |f| %>
+    <%= f.input :category %>
+    <%= f.input :name %>
+    <%= f.input :cuisine %>
+    <%= f.input :address %>
+    <%= f.submit "Add place", class: "btn btn-flat" %>
+  <% end %>
+</div>
