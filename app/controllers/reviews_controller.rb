@@ -1,10 +1,10 @@
 class ReviewsController < ApplicationController
   def create
-    @reviews = Review.new(review-params)
+    @reviews = Review.new(review_params)
     if reviews.save?
-      redirect-@reviews
+      # redirect-@reviews
     else
-      render :new, :status unporcessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
