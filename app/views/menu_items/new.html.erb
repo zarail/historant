@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Add a menu item </h1>
+
+  <div>
+    <%= simple_form_for [@place, @menu_item] do |f| %>
+      <%= f.input :name, required: false %>
+      <%= f.input :price, required: false %>
+      <%= f.input :category, required: false %>
+      <%= f.submit "Create a menu item", class: "btn btn-ghost" %>
+    <% end %>
+  </div>
+</div>
