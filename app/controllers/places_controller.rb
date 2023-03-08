@@ -19,6 +19,7 @@ class PlacesController < ApplicationController
 
   def show
     @place = Place.find(params[:id])
+    @menu_items = @place.menu_items
   end
 
   def destroy

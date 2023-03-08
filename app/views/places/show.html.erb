@@ -3,16 +3,3 @@
     <h1><%= @place.name %></h1>
   </div>
 </div>
-
-<!-- add for each to show all the menu items -->
-
-<div class="container">
-  <div class="card text-center">
-    <h1><%= @menu_item.name %></h1>
-  </div>
-  <div class="card mt-3 text-center">
-    <p><strong>Price:</strong><%= @menu_item.price%>€</p>
-    <p><strong>Category:</strong><%= @menu_item.category %></p>
-    <p><strong>Place:</strong><%= @menu_item.place.name %></p>
-  </div>
-</div>

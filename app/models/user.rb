@@ -6,7 +6,6 @@ class User < ApplicationRecord
 
   has_many :places
   has_many :menu_items, through: :places
-  has_many :reviews, through: :menu_items
 
   # validates :first_name, :last_name, :email, :password, presence: true
 end

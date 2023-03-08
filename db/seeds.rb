@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 Place.destroy_all
-Review.destroy_all
 MenuItem.destroy_all
 User.destroy_all
 
@@ -65,6 +64,9 @@ indian_biryani = MenuItem.new(
     name: "Biryani",
     price: 10,
     category: "Main Course"
+    # d
+    # d
+    # d
   }
 )
 indian_biryani.place = punjabi
@@ -79,23 +81,3 @@ cappuccino_cafe = MenuItem.new(
 )
 cappuccino_cafe.place = cafe
 cappuccino_cafe.save!
-
-review_biryani = Review.new(
-  {
-    visit_date: Date.today,
-    rating: 5,
-    description: "Very good dish with lots of sauce"
-  }
-)
-review_biryani.menu_item = indian_biryani
-review_biryani.save!
-
-review_cappuccino = Review.new(
-  {
-    visit_date: Date.yesterday,
-    rating: 3,
-    description: "Didn't like it too much, was too strong for me"
-  }
-)
-review_cappuccino.menu_item = cappuccino_cafe
-review_cappuccino.save!
