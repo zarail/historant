@@ -1,8 +1,0 @@
-<h1>Leave Your Review Here!</h1>
-
-<%= simple_form_for [@menu_item, @review], data: { controller: "flatpickr" } do |f| %>
-  <%= f.input :description %>
-  <%= f.collection_radio_buttons :rating, [[1, '1'], [2, '2'], [3, '3'], [4, '4'], [5, '5']], :first.to_proc, :last %>
-  <%= f.input :visit_date, as: :string, input_html: { data: { flatpickr_target: "visitDate" } } %>
-  <%= f.button :submit %>
-<% end %>
