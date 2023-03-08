@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :menu_items, only: %i[destroy show] # edit update
 
   root to: "pages#home"
+
+  get "dashboard", to: "pages#dashboard"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
