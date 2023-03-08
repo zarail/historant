@@ -1,9 +1,24 @@
-.card-deck {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#places-carousel {
+
+  background-color: rgb(186, 39, 88);
+  margin: auto 0;
+  height: 100;
+  width: 100%
+}
+
+.carousel-inner {
+  background-color: blue;
+}
+
+.card-text {
+  color: midnightblue;
 }
 
 .card {
-  margin: 10px;
+  background-color: red;
+  display: flex;
+}
+
+.card-body {
+  margin: 0 auto;
 }

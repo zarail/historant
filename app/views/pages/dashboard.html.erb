@@ -1,18 +1,67 @@
+
+
+<div class="container">
 <h1>Dashboard</h1>
-
-
 <h2>Places you have visited</h2>
 
+<div id="places-carousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <% @places.each_with_index do |place, index| %>
 
-<div class="card-deck">
-  <% @places.each do |place| %>
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title"><%= place.name %></h5>
-        <p class="card-text"><%= place.address %></p>
-        <p class="card-text"><%= place.category %></p>
-        <p class="card-text"><%= place.cuisine %></p>
+      <div class="carousel-item <%= 'active' if index == 0 %>">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Name: <%= place.name %></h5>
+            <p class="card-text">Address: <%= place.address %></p>
+            <p class="card-text">Category: <%= place.category %></p>
+            <p class="card-text">Cuisine: <%= place.cuisine %></p>
+          </div>
+        </div>
       </div>
-    </div>
-  <% end %>
+
+    <% end %>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#places-carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#places-carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+
+<br>
+
+
+<br>
+
+<div class="container height- 200">
+<h2>You Have Eaten</h2>
+<div id="menu_items-carousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <% @menu_items.each_with_index do |menu_item, index| %>
+      <div class="carousel-item <%= 'active' if index == 0 %>">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= menu_item.name %></h5>
+            <p class="card-text"><%= menu_item.price %></p>
+            <p class="card-text"><%= menu_item.category %></p>
+
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#menu_items-carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#menu_items-carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
 </div>
