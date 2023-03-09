@@ -63,10 +63,11 @@ indian_biryani = MenuItem.new(
   {
     name: "Biryani",
     price: 10,
-    category: "Main Course"
-    # d
-    # d
-    # d
+    category: "Main Course",
+    visit_date: Date.today,
+    rating: 5,
+    description: "Fantastic, with lots of sauce"
+
   }
 )
 indian_biryani.place = punjabi
@@ -76,7 +77,10 @@ cappuccino_cafe = MenuItem.new(
   {
     name: "Cappuccino",
     price: 3.5,
-    category: "Hot Beverage"
+    category: "Hot Beverage",
+    visit_date: Date.yesterday,
+    rating: 1,
+    description: "never again.. tasted like instant coffee"
   }
 )
 cappuccino_cafe.place = cafe
