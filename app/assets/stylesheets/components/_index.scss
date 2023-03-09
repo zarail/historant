@@ -5,6 +5,11 @@
 @import "navbar";
 @import "footer";
 @import "button";
-@import "form_devise";
+// @import "form_devise";
 @import "dashboard";
 @import "card";
+
+.search {
+  margin-bottom: 50px;
+  position: relative;
+}

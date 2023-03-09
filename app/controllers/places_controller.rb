@@ -32,6 +32,17 @@ class PlacesController < ApplicationController
     redirect_to places_path
   end
 
+  def index
+    if params[:query].present?
+      @places = Place.search_category_name_address_cuisine(params[:query])
+      if @places.empty?
+        flash.now[:notice] = "No results found for '#{params[:query]}'!"
+      end
+    else
+      @places = Place.all
+    end
+  end
+
   private
 
   def place_params

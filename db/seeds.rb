@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require "open-uri"
+
 Place.destroy_all
 MenuItem.destroy_all
 User.destroy_all
@@ -59,6 +61,7 @@ cafe = Place.new(
 cafe.user = user
 cafe.save!
 
+file = URI.open("https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmlyeWFuaXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60")
 indian_biryani = MenuItem.new(
   {
     name: "Biryani",
@@ -70,8 +73,12 @@ indian_biryani = MenuItem.new(
 
   }
 )
+indian_biryani.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+
 indian_biryani.place = punjabi
 indian_biryani.save!
+
+file = URI.open("https://images.unsplash.com/photo-1516743619420-154b70a65fea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FwcHVjY2lub3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60")
 
 cappuccino_cafe = MenuItem.new(
   {
@@ -83,5 +90,7 @@ cappuccino_cafe = MenuItem.new(
     description: "never again.. tasted like instant coffee"
   }
 )
+cappuccino_cafe.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+
 cappuccino_cafe.place = cafe
 cappuccino_cafe.save!
