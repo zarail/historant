@@ -1,6 +1,6 @@
 <div class="container">
   <div class="search">
-      <%= form_with url: places_path, method: :get, class: "d-flex" do %>
+      <%= form_with url: search_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
         params[:query],
         class: "form-control me-3",
@@ -15,4 +15,10 @@
       </div>
     <% end %>
   </div>
+
+  <ul>
+    <% @places.each do |place| %>
+      <li><%= place.name %></li>
+    <% end %>
+  </ul>
 </div>

@@ -10,8 +10,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   get "dashboard", to: "pages#dashboard"
-  get "search", to: "pages#search"
-  get "search", to: "pages#search"
+  get "search", to: "pages#search", as: :search
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

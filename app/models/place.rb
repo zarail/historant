@@ -1,4 +1,6 @@
 class Place < ApplicationRecord
+  include PgSearch::Model
+
   belongs_to :user
   has_many :menu_items, dependent: :destroy
 
