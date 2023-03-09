@@ -4,6 +4,10 @@ class MenuItemsController < ApplicationController
     @menu_item = MenuItem.find(params[:id])
   end
 
+  def index
+    @menu_items = MenuItem.all
+  end
+
   def new
     @menu_item = MenuItem.new
   end
