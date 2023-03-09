@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :places, only: %i[new create destroy show] do # edit update index
+  resources :places, only: %i[new create destroy show index] do # edit update index
     resources :menu_items, only: %i[new create] # index
   end
 

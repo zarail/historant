@@ -1,18 +1,36 @@
 #places-carousel {
 
-  background-color: rgb(186, 39, 88);
   margin: auto 0;
   height: 100;
   width: 100%
 }
 
-.carousel-inner {
-  background-color: rgb(0, 255, 76);
+.list {
+  text-align: center;
+}
+
+.btn{
+  color: rgb(85, 14, 14);
 }
 
 .card-text {
   color: rgb(55, 25, 3);
+  text-align: center;
 
+}
+
+h1{
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  text-align: center;
+  margin-top: 60px;
 }
 
 .card {
@@ -21,5 +39,6 @@
 }
 
 .card-body {
-  margin: 0 auto;
+
+  height: 200px;
 }
