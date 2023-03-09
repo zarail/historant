@@ -13,8 +13,17 @@
   </head>
 
   <body>
+    <% unless @no_navbar %>
+      <%= render "shared/navbar" %>
+    <% end %>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
     <%= yield %>
+
+    <% unless @no_navbar %>
+      <%= render "shared/footer" %>
+    <% end %>
   </body>
 </html>
