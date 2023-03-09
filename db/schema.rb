@@ -18,6 +18,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_110053) do
     t.string "category"
     t.string "name"
     t.float "price"
+    t.date "visit_date"
+    t.integer "rating"
+    t.text "description"
     t.bigint "place_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
