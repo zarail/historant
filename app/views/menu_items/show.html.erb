@@ -3,8 +3,12 @@
     <h1><%= @menu_item.name %></h1>
   </div>
   <div class="card mt-3 text-center">
-    <p><strong>Price:</strong><%= @menu_item.price%>€</p>
-    <p><strong>Category:</strong><%= @menu_item.category %></p>
-    <p><strong>Place:</strong><%= @menu_item.place.name %></p>
+    <p><strong>from &nbsp</strong><%= @menu_item.place.name %></p>
+    <p><strong>Price: &nbsp</strong><%= @menu_item.price%>€</p>
+    <p><strong>Category: &nbsp</strong><%= @menu_item.category %></p>
+    <p><strong>visited on: &nbsp</strong><%= @menu_item.visit_date.strftime("%A, %b %d") %></p>
+    <p><strong>Rating: &nbsp</strong><%= @menu_item.rating %></p>
+    <p><strong>Description: &nbsp</strong><%= @menu_item.description %></p>
+    <p><%= cl_image_tag @menu_item.photo.key, height: 300, width: 400, crop: :fill %></p>
   </div>
 </div>
