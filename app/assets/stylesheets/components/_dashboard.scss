@@ -1,5 +1,4 @@
 #places-carousel {
-
   background-color: rgb(186, 39, 88);
   margin: auto 0;
   height: 100;
@@ -12,13 +11,17 @@
 
 .card-text {
   color: rgb(55, 25, 3);
+}
 
+.card-body {
+  margin: 0 auto;
 }
 
 .card {
-  background-color: rgb(224, 163, 49);
+  background-color: rgb(255, 221, 221);
   display: flex;
 }
+
 .card-category {
   background-size: cover;
   background-position: center;
@@ -32,8 +35,4 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.card-body {
-  margin: 0 auto;
 }
