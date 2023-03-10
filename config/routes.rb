@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :menu_items, only: %i[new create] # index
   end
 
-  resources :menu_items, only: %i[destroy show] # edit update
+  resources :menu_items, only: %i[destroy show index] # edit update
 
   root to: "pages#home"
 
