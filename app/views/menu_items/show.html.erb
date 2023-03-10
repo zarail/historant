@@ -1,4 +1,22 @@
 <div class="container">
+  <div class="card-trip">
+    <img src="<%= cl_image_tag @menu_item.photo.key%>" />
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= @menu_item.name %></h2>
+        <p><strong>from &nbsp</strong><%= @menu_item.place.name %></p>
+        <p><strong>Price: &nbsp</strong><%= @menu_item.price%>€</p>
+        <p><strong>Category: &nbsp</strong><%= @menu_item.category %></p>
+        <p><strong>visited on: &nbsp</strong><%= @menu_item.visit_date.strftime("%A, %b %d") %></p>
+        <p><strong>Rating: &nbsp</strong><%= @menu_item.rating %></p>
+      </div>
+      <p><strong>Description: &nbsp</strong><%= @menu_item.description %></p>
+    </div>
+  </div>
+  <a href="/dashboard" class="btn btn-ghost" role="button">Go to dashboard</a>
+</div>
+
+<div class="container mb-7">
   <div class="card mt-3 text-center">
     <h1><%= @menu_item.name %></h1>
     <p><strong>from &nbsp</strong><%= @menu_item.place.name %></p>
@@ -9,4 +27,5 @@
     <p><strong>Description: &nbsp</strong><%= @menu_item.description %></p>
     <p><%= cl_image_tag @menu_item.photo.key, height: 300, width: 400, crop: :fill %></p>
   </div>
+  <a href="/dashboard" class="btn btn-ghost" role="button">Go to dashboard</a>
 </div>
