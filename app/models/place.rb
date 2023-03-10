@@ -6,7 +6,7 @@ class Place < ApplicationRecord
 
   validates :name, presence: true
 
-  include PgSearch::Model
+  # change the search methods ... watch the video!!
 
   pg_search_scope :search_category_name_address_cuisine,
   against: [:category, :name, :address, :cuisine],

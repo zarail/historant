@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :places, only: %i[new create destroy show index] do # edit update index
-    resources :menu_items, only: %i[new create] # index
+    resources :menu_items, only: %i[new create]
   end
 
   resources :menu_items, only: %i[destroy show index] # edit update
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get "dashboard", to: "pages#dashboard"
   get "search", to: "pages#search", as: :search
-
+  get "profile", to: "pages#profile"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
