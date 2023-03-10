@@ -5,7 +5,7 @@ class MenuItemsController < ApplicationController
   end
 
   def index
-    @menu_items = MenuItem.all
+    @menu_items = current_user.menu_items
   end
 
   def new
