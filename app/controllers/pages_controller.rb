@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    # @no_navbar = true
+    @no_navbar = true
   end
 
   def dashboard
