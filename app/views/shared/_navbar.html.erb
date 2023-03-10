@@ -1,14 +1,23 @@
-<nav class="navbar navbar-light sticky-top">
+<nav class="navbar navbar-light d-flex sticky-top">
   <div class="container-fluid">
-    <button class="navbar-icon btn fa-2x" type="button">
+
+    <button class="navbar-icon btn fa-2x magnifier-icon" type="button">
+      <%= link_to "/" do %>
+      <i class="fa-sharp fa-solid fa-plus text-white"></i>
+      <% end %>
+    </button>
+
+    <button class="navbar-icon magnifier-icon btn fa-2x" type="button">
       <%= link_to "/search" do %>
       <i class="fa-sharp fa-solid fa-magnifying-glass text-white"></i>
       <% end %>
     </button>
+
     <%= link_to "/", class: "navbar-brand" do %>
       <%= image_tag "https://res.cloudinary.com/dwrkiuiqa/image/upload/v1678439564/Historant-logo-BIG-LOGO-WHITE_huxdwd.png" %>
     <% end %>
-    <button class="navbar-icon navbar-toggler btn fa-2x mx-3" id="navbar-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+    <button class="navbar-icon navbar-toggler btn fa-2x mx-4" id="navbar-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <span class="fa-sharp fa-solid fa-bars"></span>
     </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -19,7 +28,7 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link active" aria-current="page" href="/"><strong>Home</strong></a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/profile">Profile</a>

@@ -23,10 +23,17 @@
   border: none;
 }
 
-#navbar-button:active, #navbar-button:visited, #navbar-button:focus, #navbar-button:hover  {
-  border: none !important;
-  outline: 0 !important;
-  background-color: transparent !important;
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.magnifier-icon:focus,
+.magnifier-icon:active {
+  outline: none;
+  box-shadow: none;
 }
 
 .btn.show {
