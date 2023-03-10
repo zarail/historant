@@ -12,35 +12,38 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
-.card-trip {
+.card-showpage {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-trip > img {
+.card-showpage > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-.card-trip h2 {
-  font-size: 16px;
+.card-showpage h2 {
+  font-size: 20px;
   font-weight: bold;
-  margin-top: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
-.card-trip p {
-  font-size: 12px;
+.card-showpage p {
+  font-size: 14px;
   opacity: .7;
-  margin: 0;
+  margin-bottom: 0;
 }
 
-.card-trip .card-trip-infos {
+.card-showpage .card-showpage-infos {
   padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: flex-end;
+  // position: relative;
+}
+
+.card-review {
+  padding: 16px;
 }
