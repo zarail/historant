@@ -3,7 +3,7 @@
     <div class="col-xs-12 col-sm-4 col-sm-offset-4">
       <div class="form-login">
         <h2>Add a menu item </h2>
-        <%= simple_form_for([@place, @menu_item]) do |f| %>
+        <%= form_with([@place, @menu_item]) do |f| %>
           <div class="form-inputs">
             <%= f.input :name, class: 'form-control' %>
             <%= f.input :category, class: 'form-control' %>
