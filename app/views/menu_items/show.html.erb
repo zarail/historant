@@ -4,23 +4,23 @@
 
     <div class="card-showpage-infos">
       <h2><%= @menu_item.name %></h2>
-      <p><strong>from &nbsp</strong><%= @menu_item.place.name %></p>
+      <p><em>from &nbsp<%=@menu_item.place.name %></em></p>
     </div>
 
     <div class="row card-showpage-infos">
       <div class= "col-6">
-        <p><em>Category:</em></p>
-        <p><strong><%= @menu_item.category %></strong></p>
+        <p><strong>Category:</strong></p>
+        <p><em><%= @menu_item.category %></em></p>
       </div>
       <div class= "col-6">
-        <p><em>visited on:</em></p>
-        <p><strong><%= @menu_item.visit_date.strftime("%A, %b %d") %></strong></p>
+        <p><strong>visited on:</strong></p>
+        <p><em><%= @menu_item.visit_date.strftime("%A, %b %d") %></em></p>
       </div>
     </div>
 
     <div class="row card-showpage-infos">
       <div class= "col-6">
-        <p><em>Rating:</em></p>
+        <p><strong>Rating:</strong></p>
         <p>
           <% @menu_item.rating.times do %>
             <i class="fa-solid fa-star"></i>
@@ -31,13 +31,13 @@
         </p>
       </div>
       <div class= "col-6">
-        <p><em>Price:</em></p>
-        <p><strong><%= @menu_item.price %>€</strong></p>
+        <p><strong>Price:</strong></p>
+        <p><em><%= @menu_item.price %>€</em></p>
       </div>
     </div>
     <div class="card-review">
-      <p><em>Review:</em></p>
-      <p><strong><%= @menu_item.description %></strong></p>
+      <p><strong>Review:</strong></p>
+      <p><em><%= @menu_item.description %></em></p>
     </div>
   </div>
   <a href="/dashboard" class="btn btn-ghost" role="button">Go to dashboard</a>
