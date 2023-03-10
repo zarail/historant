@@ -1,20 +1,6 @@
 <div class="container">
   <h1>Dashboard</h1>
   <h2>Places you have visited</h2>
-    <div class="d-flex justify-content-end">
-    <%= link_to "see all places", places_path, style: "text-decoration: none; color: red;" %>
-  </div>
-
-  <ul class="list-group" data-places-target="list">
-    <% @places.each do |place| %>
-      <% if place.name == "1" %>
-        <li class="list-group-item"><%= place.name %></li>
-      <% else %>
-        <li class="list-group-item" hidden><%= place.name %></li>
-      <% end %>
-    <% end %>
-  </ul>
-
 
   <div id="places-carousel" class="carousel slide" data-bs-ride="carousel">
     <ol class="carousel-indicators">
@@ -47,23 +33,24 @@
       <span class="visually-hidden">Next</span>
     </a>
   </div>
-
-  <br>
-
-  <h2>You Have Eaten</h2>
-  <div class="d-flex justify-content-end">
-    <%= link_to "see all menu_items", menu_items_path, style: "text-decoration: none; color: red;" %>
+     <div class="d-flex justify-content-end">
+    <%= link_to "see all", places_path, style: "text-decoration: none; color: red; font-size: 12px;" %>
   </div>
-  <ul class="list-group" data-menu_item-target="list">
-    <% @menu_items.each do |menu_item| %>
-      <% if menu_item.name == "1" %>
-        <li class="list-group-item"><%= menu_item.name %></li>
+
+  <ul class="list-group" data-places-target="list">
+    <% @places.each do |place| %>
+      <% if place.name == "1" %>
+        <li class="list-group-item"><%= place.name %></li>
       <% else %>
-        <li class="list-group-item" hidden><%= menu_item.name %></li>
+        <li class="list-group-item" hidden><%= place.name %></li>
       <% end %>
     <% end %>
   </ul>
 
+
+  <br>
+
+  <h2>You Have Eaten</h2>
   <div id="menu_items-carousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <% @menu_items.each_with_index do |menu_item, index| %>
@@ -84,3 +71,16 @@
     </button>
   </div>
 </div>
+
+<div class="d-flex justify-content-end" style="position: relative; right: 12px;">
+  <%= link_to "see all", menu_items_path, style: "text-decoration: none; color: red; font-size: 12px;" %>
+</div>
+<ul class="list-group" data-menu_items-target="list">
+    <% @menu_items.each do |menu_item| %>
+      <% if menu_item.name == "1" %>
+        <li class="list-group-item"><%= menu_item.name %></li>
+      <% else %>
+        <li class="list-group-item" hidden><%= menu_item.name %></li>
+      <% end %>
+    <% end %>
+  </ul>
